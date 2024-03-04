@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+
+{% block title %}ABOUT{% endblock %}
+
+{% block style %}
+
+    .main{
+        width: 100%;
+        background-image: linear-gradient(to right, gray, transparent), url("https://www.theladders.com/wp-content/uploads/Untitled-design-18-1-800x450.png");
+        background-position: top;
+        background-size: cover;
+        height: 98vh;
+    }
+    .container-about{
+        height: 20%;
+        width: 40%;
+        padding: 10px;
+        margin: auto;
+        margin-top: 10%;
+        text-align: center;
+    }
+    .hello{
+        font-size: 70px;
+        letter-spacing: 5px;
+        font-family: Lucida Handwriting;
+    }
+
+    .content-about{
+        font-size: 25px;
+        font-family: arial;
+
+    }
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-about">
+        <div class="background"></div>
+        <div class="hello">HELLO!</div>
+            <br>
+        <div class="content-about">We are students from NU Fairview who advocates disseminating knowledge about discrimination.
+                    This website was created and dedicated to all people who have been subjected to discrimination,
+                    as well as to people who are also supporters and people who are curious to trying the perceived discrimination scale in a school setting.
+        </div>
+        <ul>
+            <li id="take2"><a href="/#questionaire-container">TAKE THE TEST</a></li>
+        </ul>
+    </div>
+
+{% endblock %}

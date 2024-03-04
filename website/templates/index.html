@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}HOME{% endblock %}</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    *{margin:0;
+      padding:0;
+    }
+
+    html{
+          scroll-behavior: smooth;
+    }
+
+    .main{
+        width: 100vw;
+        background-image: linear-gradient(to right, gray, transparent), url("https://www.sinclairslaw.co.uk/cms/resources/istock-819382468.jpg");
+        background-position: top;
+        background-size: cover;
+        height: 109vh;
+    }
+
+    .navbar{
+        width: 100%;
+        height: 75px;
+        margin: auto;
+        background: linear-gradient(to bottom, white, transparent);
+        position: sticky;
+        top: 0px;
+        padding: 3px;
+        z-index: 2;
+        overflow: hidden;
+    }
+
+    .icon{
+          width: 200px;
+          float: left;
+          height: 70px;
+    }
+
+    .menu{
+          width: 100%;
+          height: 70px;
+          margin: auto;
+    }
+
+    ul{
+          float: center;
+          display: flex;
+          justify-content: center;
+          margin: 9px;
+          align-items: center;
+    }
+
+    ul li{
+          list-style: none;
+          margin: auto;
+          font-size: 18px;
+    }
+
+    ul li a{
+          text-decoration: none;
+          color: #000000;
+          font-family: Arial;
+          font-size: 20px;
+          font-weight: Bold;
+          transition: ease-in-out;
+    }
+
+    #take{
+          padding: 10px;
+          border: 1px solid #000000;
+          border-radius: 20px;
+
+    }
+
+    #take:hover{
+          background-color: #ffffff;
+    }
+
+    .content-home{
+          width: 45%;
+          height: 70%;
+          margin-top: 2%;
+          margin-left: 20px;
+          padding: 10px;
+          font-size: 40px;
+          font-family: arial;
+          text-align: justify;
+          text-decoration: none;
+    }
+   .title{
+          font-weight: bold;
+          text-align: center;
+          font-size: 50px;
+        }
+   .indent{
+          text-indent: 40px;
+   }
+
+    #take2{
+          margin-top: 40px;
+          padding: 10px;
+          border: 2px solid #000000;
+          border-radius: 30px;
+          font-size: 25px;
+          color: #000000;
+          text-decoration: none;
+    }
+    #take2 a{
+           color: #000000;
+    }
+    #take2:hover{
+          background-color: #ffffff;
+    }
+
+    #questionaire-container{
+          margin: 2px 20% 0px 20%;
+          padding: 40px;
+          text-align: center;
+          position: sticky;
+          background: linear-gradient(to bottom, white, transparent);
+    }
+
+    .direction{
+          font-family: Arial;
+          Font-weight: bold;
+          font-size: 40px;
+          margin-bottom: 20px;
+    }
+
+    .questions{
+          font-weight: normal;
+          font-family: arial;
+          text-align: center;
+          font-size: 30px;
+    }
+    .answer{
+        margin: 20px 20px 50px;
+        text-align: center;
+        font-weight: normal;
+        font-family: arial;
+        font-size: 25px;
+        }
+
+    .ans{
+        margin: auto 20px;
+        padding: 10px;
+        border: 2px solid grey;
+        border-radius: 10px;
+    }
+
+    input[name=answer]{
+        text-align: center;
+    }
+
+    #submit{
+          margin: 4% 1px;
+          padding: 2px 30px;
+          font-size: 25px;
+          border: 2px solid;
+          border-radius: 10px;
+    }
+  {% block style %}
+
+  {% endblock %}
+  </style>
+</head>
+<body>
+  <div class="main">
+      <div class="navbar">
+            <div class="menu">
+              <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/articles">ARTICLES</a></li>
+                <li><a href="/about">ABOUT US</a></li>
+                <li id="take"><a href="/#questionaire-container">TAKE THE TEST</a></li>
+              </ul>
+            </div>
+      </div>
+      {%block content %}
+      <div class="content-home">
+         <div class="title">Dissemination of Knowledge About Discrimination</div>
+          <br><div class="indent">Nowadays, even with the time that we progressed, it is undeniable that students in different schools still experience discrimination.
+          With that, there are a lot of forms that discrimination would take.
+            </div>
+          <br><div class="indent">Students that are working on this project decided to create a website that would help the students assess
+          themselves if they had been mistreated or discriminated against inside the school premises.
+            </div>
+          <ul>
+              <li id="take2"><a href="/#questionaire-container">TAKE THE TEST</a></li>
+          </ul>
+      </div>
+  </div>
+
+      <div id="questionaire-container">
+          <p class = "direction">
+              Direction: Answer the questions honestly.
+          </p>
+              <form action="/results" method="POST">
+                <p class = "questions" >You were discouraged by a teacher or advisor from seeking higher education.
+                        <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer1" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer1" value="1">Once or More</input>
+                            </label>
+                        </div>
+                </p>
+                <p class = "questions" >You were denied a scholarship.
+                        <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer2" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer2" value="1">Once or More</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You were not given a task or position for a school project or organization.
+                        <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer3" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer3" value="1">Once or More</input>
+                            </label>
+                        </div>
+                </p>
+
+                 <p class = "questions" >You were not given a promotion.
+                        <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer4" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer4" value="1">Once or More</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You were removed from a group or school organization.
+                        <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer5" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer5" value="1">Once or More</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You were prevented from renting or buying products or place sold in the school or near the school.
+                        <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer6" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer6" value="1">Once or More</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You were prevented from remaining in a group or organization because members or peers make your stay uncomfortable.
+                        <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer7" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer7" value="1">Once or More</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You were repeatedly bothered or annoyed in a disrespectful way by another.
+                        <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer8" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer8" value="1">Once or More</input>
+                            </label>
+                        </div>
+
+                <p class = "questions" >You were denied a promissory note.
+                        <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer9" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer9" value="1">Once or More</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You were denied or provided inferior medical care.
+                        <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer10" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer10" value="1">Once or More</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You were denied or provided inferior service by a plumber, car mechanic, or other
+                            service provider.
+                            <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="1answer11" value="0">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="1answer11" value="1">Once or More</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You are treated with less courtesy than other people.
+                            <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="2answer_12" value="1">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_12" value="2">Rarely</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_12" value="3">Sometimes</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_12" value="4">Often</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You are treated with less respect than other people.
+                            <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="2answer_13" value="1">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_13" value="2">Rarely</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_13" value="3">Sometimes</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_13" value="4">Often</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You receive poorer service than other people at restaurants or stores.
+                            <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="2answer_14" value="1">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_14" value="2">Rarely</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_14" value="3">Sometimes</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_14" value="4">Often</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >People act as if they think you are not smart.
+                            <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="2answer_15" value="1">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_15" value="2">Rarely</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_15" value="3">Sometimes</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_15" value="4">Often</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >People act as if they are afraid of you.
+                           <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="2answer_16" value="1">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_16" value="2">Rarely</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_16" value="3">Sometimes</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_16" value="4">Often</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >People act as if they think you are dishonest.
+                            <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="2answer_17" value="1">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_17" value="2">Rarely</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_17" value="3">Sometimes</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_17" value="4">Often</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >People act as if they think you are not as good as they are.
+                            <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="2answer_18" value="1">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_18" value="2">Rarely</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_18" value="3">Sometimes</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_18" value="4">Often</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You are called names or insulted.
+                            <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="2answer_19" value="1">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_19" value="2">Rarely</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_19" value="3">Sometimes</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_19" value="4">Often</input>
+                            </label>
+                        </div>
+                </p>
+
+                <p class = "questions" >You are threatened or harassed.
+                            <div class="answer">
+                            <label class="ans">
+                                <input type="radio" name="2answer_20" value="1">Never</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_20" value="2">Rarely</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_20" value="3">Sometimes</input>
+                            </label>
+                            <label class="ans">
+                                <input type="radio" name="2answer_20" value="4">Often</input>
+                            </label>
+                        </div>
+                </p>
+
+                <button type="submit" id="submit">Submit</button>
+              </form>
+      </div>
+      {% endblock %}
+  <script>
+    const form = document.getElementById('questionaire-container');
+    const radios = form.elements['input[type="radio'];
+
+    const radioArray = Array.from(radios);
+
+    radioArray.forEach(radio => {
+      radio.addEventListener('change', function() {
+        radioArray.forEach(otherRadio => {
+          if (otherRadio !== this) {
+            otherRadio.checked = false;
+          }
+        });
+      });
+    });
+      const radioInputs = document.querySelectorAll('input[type="radio"]');
+
+  </script>
+  </div>
+</body>
+</html>
