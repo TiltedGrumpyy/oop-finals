@@ -13,20 +13,20 @@ def results():
         lifetime_answers = {}
         # Getting the values of div that are named "1answer" used for getting daily score.
         for key, daily_value in request.form.items():
-            if key.startswith('1answer'):
-                daily_number = key.replace('1answer','')
+            if key.startswith('2answer'):
+                daily_number = key.replace('2answer','')
                 daily_answers[daily_number] = daily_value
         total_sum_daily_answers = sum(int(daily_value) for daily_value in daily_answers.values())
         # Getting the values of div that are named "2answer_" use for getting lifetime score.
         for key, lifetime_value in request.form.items():
-            if key.startswith('2answer_'):
-                lifetime_number = key.replace('2answer','')
+            if key.startswith('1answer'):
+                lifetime_number = key.replace('1answer','')
                 lifetime_answers[lifetime_number] = lifetime_value
         total_sum_lifetime_answers = sum(int(lifetime_value) for lifetime_value in lifetime_answers.values())
 
-        percent_total_daily_answers = (total_sum_daily_answers / 11) * 100
+        percent_total_daily_answers = (total_sum_daily_answers / 36) * 100
 
-        percent_total_lifetime_answers = (total_sum_lifetime_answers / 36) * 100
+        percent_total_lifetime_answers = (total_sum_lifetime_answers / 11) * 100
 
         total_perceived = ((total_sum_daily_answers + total_sum_lifetime_answers) / 47) * 100
 

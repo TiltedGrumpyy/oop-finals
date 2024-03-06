@@ -1,51 +1,189 @@
 {% extends "index.html" %}
 
-{% block title %}ABOUT{% endblock %}
+{% block title %}ARTICLES{% endblock %}
 
 {% block style %}
-
     .main{
         width: 100%;
-        background-image: linear-gradient(to right, gray, transparent), url("https://www.theladders.com/wp-content/uploads/Untitled-design-18-1-800x450.png");
+        background-image: linear-gradient(to bottom, gray, 10%,  transparent), url("https://static1.squarespace.com/static/57019a6db6aa607cbb909ab2/t/624265da8776ee2a68a7a7d3/1648518621937/unsplash-image-LjqARJaJotc.jpg?format=1500w");
         background-position: top;
         background-size: cover;
-        height: 98vh;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
-    .container-about{
-        height: 20%;
-        width: 40%;
-        padding: 10px;
-        margin: auto;
-        margin-top: 10%;
+    .container-articles{
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 20px;
+        text-align: left;
+        background-color: rgba(231, 231, 231, 0.80);
+        display: flex;
+    }
+    .title{
+        margin-top: 30px;
         text-align: center;
-    }
-    .hello{
-        font-size: 70px;
-        letter-spacing: 5px;
-        font-family: Lucida Handwriting;
-    }
-
-    .content-about{
-        font-size: 25px;
-        font-family: arial;
 
     }
+    .article{
+        width: 400px;
+        height: 500px;
+        margin: auto;
+        border: 3px solid black;
+        border-radius: 20px;
+    }
 
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+        position: relative;
+        border-radius: 20px 20px 0px 0px;
+        z-index: 1;
+    }
+
+    .article p{
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+    .article h1{
+        padding: 0px 10px;
+        font-size: 17px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .article button {
+        width: auto;
+        padding: 10px;
+        border: 2px solid black;
+        margin-left: 10px;
+        text-decoration: none;
+        background: transparent;
+        border-radius: 15px;
+    }
+
+    .read:hover{
+        background: white;
+    }
 {% endblock %}
 
 {% block content %}
-
-    <div class="container-about">
-        <div class="background"></div>
-        <div class="hello">HELLO!</div>
-            <br>
-        <div class="content-about">We are students from NU Fairview who advocates disseminating knowledge about discrimination.
-                    This website was created and dedicated to all people who have been subjected to discrimination,
-                    as well as to people who are also supporters and people who are curious to trying the perceived discrimination scale in a school setting.
+<div class="title">ARTICLES</div>
+    <div class="container-articles">
+        <div class="article">
+            <div class="art1">
+                <img src="https://www.hrw.org/sites/default/files/styles/embed_xxl/public/multimedia_images_2017/201706lgbt_philippines_presserpreview.jpg?itok=MMfEuF6-" alt="picture" class="picture">
+                <h1>“Just Let Us Be”: Discrimination Against LGBT Students in the Philippines</h1>
+                <p>Schools should be safe places for everyone. But in the Philippines, students who are lesbian, gay, bisexual, and transgender (LGBT) too often find that their schooling experience is marred by bullying, discrimination, lack of access to LGBT-related information, and in some cases, physical or sexual assault. These abuses can cause deep and lasting harm and curtail students’ right to education, protected under Philippine and international law.</p>
+                <button type="button" class="read"><a href="https://www.hrw.org/report/2017/06/22/just-let-us-be/discrimination-against-lgbt-students-philippines">Read More</a></button>
+            </div>
         </div>
-        <ul>
-            <li id="take2"><a href="/#questionaire-container">TAKE THE TEST</a></li>
-        </ul>
+        <div class="article">
+            <div class="art1">
+                <img src="https://media.interaksyon.com/wp-content/uploads/2021/12/onsite-classes-covid-19-pandemic-640x426.jpg" alt="picture" class="picture">
+                <h1>Concerns on attire discrimination arise after DepEd makes uniforms optional</h1>
+                <p>Vice President and Department of Education (DepEd) Secretary Sara Duterte’s pronouncements on July 18 making school uniforms optional for school year 2022 to 2023 earned mixed reactions from social media users.
+                    Duterte said that making uniforms non-mandatory is meant to ease the financial burden on students’ families impacted by “increasing prices and economic losses” due to the COVID-19 pandemic.</p>
+                <button type="button" class="read"><a href="https://interaksyon.philstar.com/trends-spotlights/2022/07/19/222594/concerns-on-attire-discrimination-arise-after-deped-makes-uniforms-optional/">Read More</a></button>
+                </div>
+        </div>
+        <div class="article">
+            <div class="art1">
+                    <img src="https://philippines.licas.news/wp-content/uploads/2020/06/20170526_MSU-IIT_evacuationcenter_mzs-7345-3-696x464.jpg" alt="picture" class="picture">
+                    <h1>Survey: Young Filipino Muslims feel discriminated against because of religion</h1>
+                    <p>Young Filipino Muslims feel that they are being discriminated against because of their religion.
+                    Most of the respondents of a risk perception survey conducted by International Alert among Muslim youth early this year said they feel that they are being discriminated against because of their religion.
+                        The survey was done in a village in the Philippine capital and in the northern city of Baguio during the first quarter of the year.</p>
+                    <button type="button" class="read"><a href="https://philippines.licas.news/2020/06/26/survey-young-filipino-muslims-feel-discriminated-against-because-of-religion/">Read More</a></button>
+            </div>
+            </div>
+        </div>
+            <div class="container-articles">
+            <div class="article">
+                <div class="art1">
+                    <img src="https://images.gmanews.tv/webpics/2023/11/natl_childrens_month_culminating_activity_2023_11_27_17_56_23.jpg" alt="picture" class="picture">
+                    <h1>DepEd logs 1,709 abuse reports from students</h1>
+                    <p>The Department of Education (DepEd) has received a total of 1,709 reports of various forms of abuse committed against learners, Vice President and Education Secretary Sara Duterte said Monday.
+                    During the 31st National Children’s Month culminating program, Duterte said the reports were coursed through the Learner’s Telesafe Contact Center Helpline.</p>
+                    <button type="button" class="read"><a href="https://www.gmanetwork.com/news/topstories/nation/889682/deped-logs-1-709-abuse-reports-from-students/story/">Read More</a></button>
+                </div>
+            </div>
+            <div class="article">
+                <div class="art1">
+                    <img src="https://files01.pna.gov.ph/category-list/2022/02/22/f2f.jpg" alt="picture" class="picture">
+                    <h1>Inclusive education for students with disabilities lauded</h1>
+                    <p>A party-list lawmaker on Thursday said the enactment of the law mandating all schools nationwide to ensure inclusive education for learners with disabilities (LWDs) is another step forward for the promotion and protection of the rights of persons with disabilities (PWDs).</p>
+                    <button type="button" class="read"><a href="https://www.pna.gov.ph/articles/1170023">Read More</a></button>
+                </div>
+            </div>
+             <div class="article">
+                <div class="art1">
+                    <img src="https://newsinfo.inquirer.net/files/2023/04/Sec.-Sara-Duterte-0132023-03-620x348.jpg" alt="picture" class="picture">
+                    <h1>K-12 revisions tackle same-sex unions, gender discrimination</h1>
+                    <p>MANILA, Philippines — Grade 10 students will soon learn about the difference between same-sex unions and same-sex marriage as the revised K-12 curriculum integrates diverse contemporary issues in the social studies subject.</p>
+                    <button type="button" class="read"><a href="https://newsinfo.inquirer.net/1761599/k-12-revisions-tackle-same-sex-unions-gender-discrimination">Read More</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="container-articles">
+            <div class="article">
+                <div class="art1">
+                    <img src="https://www.rappler.com/tachyon/2020/10/students-online-learning-mandaluyong-october-5-2020-001.jpg?resize=1600%2C1068&zoom=1" alt="picture" class="picture">
+                    <h1>DepEd: Module that wrongly depicted Igorots ‘mistakenly reproduced’</h1>
+                    <p>The Department of Education (DepEd) said on Tuesday, February 9, that the self-learning module (SLM) that wrongly depicted Igorots was “mistakenly reproduced in good faith by some school personnel.” In a statement sent to media, the DepEd said that the material was locally-developed, which means that it did not undergo vetting by the Central Office.</p>
+                    <button type="button" class="read"><a href="https://www.rappler.com/nation/deped-says-module-wrongly-depicting-igorots-mistakenly-reproduced/">Read More</a></button>
+                </div>
+            </div>
+            <div class="article">
+                <div class="art1">
+                    <img src="https://files01.pna.gov.ph/category-list/2022/08/25/img-4ffc2cdc0990d3fcc53a4de58076ce6f-v.jpg" alt="picture" class="picture">
+                    <h1>Padilla files bill protecting religious freedom in schools</h1>
+                    <p>Senate Bill 1609, or the proposed Act Protecting Free Exercise and Enjoyment of Religion of Students in Educational Institutions, Padilla wants to give learners the "liberty to disassociate and excuse themselves from participating in any religious classes and activities that interfere with his religious tenets or faith without the fear of expulsion, sanction, or reprimand."</p>
+                    <button type="button" class="read"><a href="https://www.pna.gov.ph/articles/1191308">Read More</a></button>
+                </div>
+            </div>
+             <div class="article">
+                <div class="art1">
+                    <img src="https://api.time.com/wp-content/uploads/2023/06/philippines-lgbt-sogie-1.jpg?quality=85&w=1920" alt="picture" class="picture">
+                    <h1>Southeast Asia’s Most Gay-Friendly Country Still Has No Law Against LGBT Discrimination</h1>
+                    <p>At first glance, the deeply Catholic Philippines can seem surprisingly LGBT-friendly. In a nation of 110 million people, more than 110,000 showed up last week to Quezon City’s Pride festival, making it by far the largest LGBT congregation in Southeast Asia. The country also ranks highest in the region for LGBT social acceptance.</p>
+                    <button type="button" class="read"><a href="https://time.com/6290762/philippines-pride-lgbt-discrimination-sogie-equality-bill/">Read More</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="container-articles">
+            <div class="article">
+                <div class="art1">
+                    <img src="https://files01.pna.gov.ph/category-list/2018/07/20/hataman-pic.jpg" alt="picture" class="picture">
+                    <h1>Anti-discrimination bill filed in House</h1>
+                    <p>A measure penalizing acts of discrimination based on race, ethnicity, or religion and imposing a jail term of up to six months and a fine of up to PHP100,000 against violators has been filed at the House of Representatives.
+                    Basilan Representative Mujiv Hataman filed on Friday House Bill No. 3526, or the proposed Equality and Non-Discrimination on Race, Ethnicity, and Religion Act.</p>
+                    <button type="button" class="read"><a href="https://www.pna.gov.ph/articles/1181225">Read More</a></button>
+                </div>
+            </div>
+            <div class="article">
+                <div class="art1">
+                    <img src="https://www.savethechildren.org.ph/__resources/userfiles/image/program-stories/watch_its_wrong_to_discriminate_children_like_me/01.jpg" alt="picture" class="picture">
+                    <h1>‘It’s wrong to discriminate children like me’</h1>
+                    <p>She tells fellow children to stop bullying others based on physical appearances, class, religion, or any other factors.
+                    Globally, nearly 130 million students ages 13 to 15 experience bullying, according to UNICEF data.
+                    In the Philippines, bullying is also a problem experienced in many schools. In the school year 2015-2016 alone, local media reported that there were “11,448 incidents of bullying,” as documented by the Department of Education.</p>
+                    <button type="button" class="read"><a href="https://www.savethechildren.org.ph/our-work/our-stories/story/watch-its-wrong-to-discriminate-children-like-me/">Read More</a></button>
+                </div>
+            </div>
+             <div class="article">
+                <div class="art1">
+                    <img src="https://www.hrw.org/sites/default/files/styles/embed_xxl/public/multimedia_images_2017/201706lgbt_philippines_photo01.jpg?itok=Cw47_m7N" alt="picture" class="picture">
+                    <h1>The Philippines Affirmed Equal Rights in Schools – Now It Should Protect Them</h1>
+                    <p>The Department of Education issued a gender-responsive basic education policy on June 29 that calls for an end to discrimination based on gender, sexual orientation and gender identity in schools. The policy is an important step toward providing equal rights for all students—but history shows it is unlikely to make a real difference for lesbian, gay, bisexual and transgender (LGBT) youth unless the DepEd transforms its promise into meaningful protection.</p>
+                    <button type="button" class="read"><a href="https://www.hrw.org/news/2017/07/19/philippines-affirmed-equal-rights-schools-now-it-should-protect-them">Read More</a></button>
+             </div>
+        </div>
     </div>
+
 
 {% endblock %}
