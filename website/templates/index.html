@@ -128,7 +128,7 @@
     .direction{
           font-family: Arial;
           Font-weight: bold;
-          font-size: 40px;
+          font-size: 35px;
           margin-bottom: 20px;
     }
 
@@ -198,7 +198,10 @@
 
       <div id="questionaire-container">
           <p class = "direction">
-              Direction: Answer the questions honestly.
+            Instructions: How many times in your life have you been discriminated against in each of the following ways because of such 
+            things as your race, ethnicity, gender, age, religion, physical appearance, sexual orientation, or other characteristics 
+            in the school? Choose which answer is appropriate for you, for questions 1-11 and how often you experienced the following 
+            scenarios for questions 12-20. 
           </p>
               <form action="/results" method="POST">
                 <p class = "questions" >You were discouraged by a teacher or advisor from seeking higher education.
@@ -309,8 +312,7 @@
                         </div>
                 </p>
 
-                <p class = "questions" >You were denied or provided inferior service by a plumber, car mechanic, or other
-                            service provider.
+                <p class = "questions" >You were denied or provided inferior service by school services.
                             <div class="answer">
                             <label class="ans">
                                 <input type="radio" name="1answer11" value="0">Never</input>
